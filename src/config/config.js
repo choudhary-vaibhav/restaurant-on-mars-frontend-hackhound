@@ -1,10 +1,10 @@
 const config = {
-    env: 'local',
+    env: 'prod',
     get apiIpWithPort() {
-        return this.env === 'prod' ? 'https://cosmic-cuisine.onrender.com/' : 'localhost:1010'
+        return this.env === 'prod' ? 'cosmic-cuisine.onrender.com' : 'localhost:1010'
     },
     get apiBaseurl() {
-        return 'http://' + this.apiIpWithPort
+        return 'https://' + this.apiIpWithPort
     },
     get apiUrl() {
         return this.apiBaseurl + '/';
